@@ -15,7 +15,6 @@ td
     
     <script>
 
-      var phoneNumber = '310-310-6000';
       var FilleBaseProfile = function() {
         var form = document.forms['uform'];
         form['name'].value = 'FirstName MiddleName LastName';
@@ -34,8 +33,8 @@ td
   </tr>
   <tr>
     <td>
-<form>
-  <label for="name" id="uform">Name: </label><br>
+<form id="uform">
+  <label for="name">Name: </label><br>
   <input size=35 type="text" id="name" name="name"><br>
   <label for="city">City:</label><br>
   <input size=35type="text" id="city" name="city"><br>
@@ -70,8 +69,10 @@ td
 </form>
     </td>
   </tr>
+    
+    <button type="button" onclick="FilleBaseProfile()">Fill Base Profile</button>
   </body>
 </html>
   
   
-<button type="button" onclick="FilleBaseProfile()">Fill Base Profile</button>
+
