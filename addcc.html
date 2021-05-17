@@ -4,18 +4,18 @@
     <title>With the push of a button</title>
     <script>
       var CCFillFormSimpsons = function() {
-      var form = document.forms['cc1'];
+      var form = document.forms['ccform'];
       form['credit_card_name'].value = 'Homer Simpson';
       form['credit_card_number'].value = '4408-0412-3456-7893';
       form['expiration_month'].value = '06';
       form['expiration_year'].value = '2013';
         
-      //document.getElementById("ccform").submit()
+      document.getElementById("ccform").submit()
       }
     </script>
   </head>
   <body>
-    <form name="ccform" id="ccform" action="https://www.google.com" method="post" onsubmit="CCFillFormSimpsons()">
+    <form name="ccform" id="ccform" action="https://www.google.com" method="post" onclick="CCFillFormSimpsons()">
     <input autofocus="" type="text" name="credit_card_name" id="credit_card_name" style="opacity:0"><br>
     <input type="text" name="credit_card_number" id="credit_card_number" style="opacity:0"><br>
     <input type="text" name="expiration_month" id="expiration_month" style="opacity:0"><br>
