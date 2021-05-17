@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>With the push of a button</title>
+    <script>
+      var CCFillFormSimpsons = function() {
+      var form = document.forms['cc1'];
+      form['credit_card_name'].value = 'Homer Simpson';
+      form['credit_card_number'].value = '4408-0412-3456-7893';
+      form['expiration_month'].value = '06';
+      form['expiration_year'].value = '2013';
+      }
+    </script>
+  </head>
+  <body>
+    <form name="cc1.1" id="cc1" action="this" onsubmit="CCFillFormSimpsons()">
+    <input autofocus="" type="text" name="credit_card_name" id="credit_card_name" style="opacity:0"><br>
+    <input type="text" name="credit_card_number" id="credit_card_number" style="opacity:0"><br>
+    <input type="text" name="expiration_month" id="expiration_month" style="opacity:0"><br>
+    <input type="text" name="expiration_year" id="expiration_year" style="opacity:0"><br>
+    <br>
+      <input type="submit" value="Add Credit Card" id="credit_card_submit">
+    </form>
+  </body>
+</html>
