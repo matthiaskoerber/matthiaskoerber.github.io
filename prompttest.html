@@ -9,7 +9,7 @@ td
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>title</title>
+    <title>Save Prompt Test Page</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     
@@ -18,11 +18,25 @@ td
       var FillBaseProfile = function() {
         var form = document.forms['uform'];
         form['name'].value = 'Pablo Picasso';
+        form['organization'].value = 'Hall of Fame';
         form['address'].value = '123 SomeStreet';
         form['city'].value = 'Washigton';
         form['state'].value = 'DC';
         form['zip'].value = '20033';
         form['country'].value = 'US';
+      }
+      
+      var AddPhoneAndEmail = function() {
+        var form = document.forms['uform'];
+        form['name'].value = 'Pablo Picasso';
+        form['organization'].value = 'Hall of Fame';
+        form['address'].value = '123 SomeStreet';
+        form['city'].value = 'Washigton';
+        form['state'].value = 'DC';
+        form['zip'].value = '20033';
+        form['country'].value = 'US';
+        form['phone'].value = '0123456789';
+        form['email'].value = 'picasso@google.com';
       }
       
       // This profile has a mergable addition to the name.
@@ -69,7 +83,8 @@ td
 <form id="uform" action=''>
   <label for="name">Name</label><br>
   <input size=35 type="text" id="name" name="name"><br>
- 
+  <label for="organization">Organization</label><br>
+  <input size=35 type="text" id="organization" name="organization"><br>
   <label for="address">Address:</label><br>
   <input size=35 type="text" id="address" name="address"><br>
   <label for="city">City:</label><br>
@@ -80,15 +95,22 @@ td
   <input size=35 type="text" id="zip" name="zip"><br>
   <label for="country">Country:</label><br>
   <input size=35 type="text" id="country" name="country"><br>
-  <button type="submit" value="Submit">Submit</button>
+  <label for="email">Email:</label><br>
+  <input size=35 type="text" id="email" name="email"><br>
+  <label for="phone">Phone:</label><br>
+  <input size=35 type="text" id="phone" name="phone"><br>
+  <button type="submit" value="Submit">Submit</button>  
 </form>
 
     
     <button type="button" onclick="FillBaseProfile()">Fill Base Profile</button>
     <br>
-    <button type="button" onclick="FillNameUpdate()">Fill Name Update</button>
+        <button type="button" onclick="AddPhoneAndEmail()">Add Phone And Mail</button>
     <br>
-    <button type="button" onclick="FillCityUpdate()">Fill City Update</button>
+    
+    <button type="button" onclick="FillNameUpdate()">Name Update</button>
+    <br>
+    <button type="button" onclick="FillCityUpdate()">City Update</button>
 
 <br><br><br><br>
 
@@ -96,14 +118,13 @@ td
 
 <form id="sform" action=''>
   <label for="first_name">First Name</label><br>
-  <input size=35 type="text" id="first_name" name="first_name"><br>
-  
+  <input size=35 type="text" id="first_name" name="first_name"><br> 
   <label for="middle_name">Middle Name</label><br>
   <input size=35 type="text" id="middle_name" name="middle_name"><br>
-  
   <label for="last_name">Last Name</label><br>
   <input size=35 type="text" id="last_name" name="last_name"><br>
-
+  <label for="organization">Organization</label><br>
+  <input size=35 type="text" id="organization" name="organization"><br>
   <label for="address">Address:</label><br>
   <input size=35 type="text" id="address" name="address"><br>
   <label for="city">City:</label><br>
@@ -113,7 +134,11 @@ td
   <label for="zip">ZIP:</label><br>
   <input size=35 type="text" id="zip" name="zip"><br>
   <label for="country">Country:</label><br>
-  <input size=35 type="text" id="country" name="country"><br>
+  <input size=35 type="text" id="country" name="country"><br> 
+  <label for="email">Email:</label><br>
+  <input size=35 type="text" id="email" name="email"><br>
+  <label for="phone">Phone:</label><br>
+  <input size=35 type="text" id="phone" name="phone"><br>
   <button type="submit" value="Submit">Submit</button>
 </form>
 
@@ -122,3 +147,4 @@ td
 
 </body>
 </html>
+  
