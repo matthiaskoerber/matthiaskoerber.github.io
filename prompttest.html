@@ -14,65 +14,111 @@ td
     <script src="script.js"></script>
     
     <script>
-
-      var FilleBaseProfile = function() {
+      // Create a basic Profile
+      var FillBaseProfile = function() {
         var form = document.forms['uform'];
-        form['name'].value = 'FirstName MiddleName LastName';
+        form['name'].value = 'Pablo Picasso';
         form['address'].value = '123 SomeStreet';
-        form['city'].value = 'SomeCity';
-        form['zip'].value = '11235';
-        form['country'].value = 'Germany';
+        form['city'].value = 'Washigton';
+        form['state'].value = 'DC';
+        form['zip'].value = '20033';
+        form['country'].value = 'US';
       }
+      
+      // This profile has a mergable addition to the name.
+      var FillNameUpdate = function() {
+        var form = document.forms['uform'];
+        form['name'].value = 'Pablo Diego Picasso';
+        form['address'].value = '123 SomeStreet';
+        form['city'].value = 'Washigton';
+        form['state'].value = 'DC';
+        form['zip'].value = '20033';
+        form['country'].value = 'US';
+      }
+      
+      // This profile has a mergable addition to the city
+      var FillCityUpdate = function() {
+        var form = document.forms['uform'];
+        form['name'].value = 'Pablo Picasso';
+        form['address'].value = '123 SomeStreet';
+        form['city'].value = 'Washigton DC';
+        form['state'].value = 'DC';
+        form['zip'].value = '20033';
+        form['country'].value = 'US';
+      }
+      
+      // This profile has a mergable addition to the city
+      var FillStructuredProfile = function() {
+        var form = document.forms['sform'];
+        form['first_name'].value = 'Pablo Diego';
+        form['middle_name'].value = '';
+        form['last_name'].value = 'Picasso';
+        form['address'].value = '123 SomeStreet';
+        form['city'].value = 'Washigton DC';
+        form['state'].value = 'DC';
+        form['zip'].value = '20033';
+        form['country'].value = 'US';
+      }
+      
   </script>
   </head>
   <body>
-<table>
-  <tr>
-    <td><h1>Unstructured Form</h1> </td>
-    <td><h1>Structured Form</h1> </td>
-  </tr>
-  <tr>
-    <td>
-<form id="uform">
-  <label for="name">Name: </label><br>
+
+<h1>Standard address form</h1>
+
+<form id="uform" action=''>
+  <label for="name">Name</label><br>
   <input size=35 type="text" id="name" name="name"><br>
-  <label for="city">City:</label><br>
-  <input size=35type="text" id="city" name="city"><br>
+ 
   <label for="address">Address:</label><br>
-  <input size=35type="text" id="address" name="address"><br>
+  <input size=35 type="text" id="address" name="address"><br>
+  <label for="city">City:</label><br>
+  <input size=35 type="text" id="city" name="city"><br>
+  <label for="state">State:</label><br>
+  <input size=35 type="text" id="state" name="state"><br>
   <label for="zip">ZIP:</label><br>
-  <input size=35type="text" id="zip" name="zip"><br>
+  <input size=35 type="text" id="zip" name="zip"><br>
   <label for="country">Country:</label><br>
   <input size=35 type="text" id="country" name="country"><br>
   <button type="submit" value="Submit">Submit</button>
 </form>
-    </td>
-    <td>
-<form>
-  <label for="title">Title:</label><br>
-  <input size=35  type="text" id="title" name="titel"><br>
-  <label for="first_name">First Name:</label><br>
+
+    
+    <button type="button" onclick="FillBaseProfile()">Fill Base Profile</button>
+    <br>
+    <button type="button" onclick="FillNameUpdate()">Fill Name Update</button>
+    <br>
+    <button type="button" onclick="FillCityUpdate()">Fill City Update</button>
+
+<br><br><br><br>
+
+<h1>Address form with structured name</h1>
+
+<form id="sform" action=''>
+  <label for="first_name">First Name</label><br>
   <input size=35 type="text" id="first_name" name="first_name"><br>
-  <label for="middle_name">Middle Name:</label><br>
-  <input size=35  type="text" id="middle_name" name="middle_name"><br>
-  <label for="surname">Surname</label><br>
-  <input size=35  type="text" id="second_surname" name="second_surname"><br>
-  <label for="city">City:</label><br>
-  <input size=35  type="text" id="city" name="city"><br>
+  
+  <label for="middle_name">Middle Name</label><br>
+  <input size=35 type="text" id="middle_name" name="middle_name"><br>
+  
+  <label for="last_name">Last Name</label><br>
+  <input size=35 type="text" id="last_name" name="last_name"><br>
+
   <label for="address">Address:</label><br>
-  <input size=35  type="text" id="address" name="address"><br>
+  <input size=35 type="text" id="address" name="address"><br>
+  <label for="city">City:</label><br>
+  <input size=35 type="text" id="city" name="city"><br>
+  <label for="state">State:</label><br>
+  <input size=35 type="text" id="state" name="state"><br>
   <label for="zip">ZIP:</label><br>
-  <input size=35  type="text" id="zip" name="zip"><br>
+  <input size=35 type="text" id="zip" name="zip"><br>
   <label for="country">Country:</label><br>
-  <input size=35  type="text" id="country" name="country"><br>
+  <input size=35 type="text" id="country" name="country"><br>
   <button type="submit" value="Submit">Submit</button>
 </form>
-    </td>
-  </tr>
-    
-    <button type="button" onclick="FilleBaseProfile()">Fill Base Profile</button>
-  </body>
-</html>
-  
-  
 
+    
+    <button type="button" onclick="FillStructuredProfile()">Fill Name Structure Update</button>
+
+</body>
+</html>
