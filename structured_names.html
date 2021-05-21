@@ -1,102 +1,132 @@
+<!DOCTYPE html>
+
 <style type="text/css">
 td
 {
     padding:0 35px;
 }
+
+label {
+  display: inline-block;
+  width: 120px;
+  text-align: left;
+}
+
+input {
+  width: 200px;
+}
+
 </style>
 
-<!DOCTYPE html>
 
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>title</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script>
+    
+      // Create a basic Profile
+      var FillHispanicName = function() {
+        var form = document.forms['unstructured_name'];
+        form['name'].value = 'Pablo Diego Ruiz Picasso';     
+        form['address'].value = '123 SomeStreet';
+        form['city'].value = 'Washigton';
+        form['state'].value = 'DC';
+        form['zip'].value = '20033';
+        form['country'].value = 'US';
+      }
+      
+      // Create a basic Profile
+      var FillWesternName = function() {
+        var form = document.forms['unstructured_name'];
+        form['name'].value = 'Thomas Anderson Smith';     
+        form['address'].value = '123 SomeStreet';
+        form['city'].value = 'Washigton';
+        form['state'].value = 'DC';
+        form['zip'].value = '20033';
+        form['country'].value = 'US';
+      }
+    </script>
   </head>
   <body>
-<table>
-  <tr>
-    <td><h1>Unstructured Form</h1> </td>
-    <td><h1>Structured Form</h1> </td>
-    <td><h1>More Structured Form</h1> </td>
-    <td><h1>Unlabeled Form</h1> </td>
-  </tr>
-  <tr>
-    <td>
-<form>
-  <label for="name">Name: </label><br>
-  <input size=35 type="text" id="name" name="name"><br>
-  <label for="city">City:</label><br>
-  <input size=35type="text" id="city" name="city"><br>
-  <label for="address">Address:</label><br>
-  <input size=35type="text" id="address" name="address"><br>
-  <label for="zip">ZIP:</label><br>
-  <input size=35type="text" id="zip" name="zip"><br>
-  <label for="country">Country:</label><br>
-  <input size=35 type="text" id="country" name="country"><br>
+
+<h1>Unstructured Name</h1>
+<form id="unstructured_name">
+  <label for="name">Name: </label>
+  <input type="text" id="name" name="name"> <br>
+  <label for="city">City:</label>
+  <input type="text" id="city" name="city"><br>
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address"><br>
+  <label for="zip">ZIP:</label>
+  <input type="text" id="zip" name="zip"><br>
+  <label for="state">State:</label>
+  <input type="text" id="state" name="state"><br>
+  <label for="country">Country:</label>
+  <input type="text" id="country" name="country"><br>
   <button type="submit" value="Submit">Submit</button>
 </form>
-    </td>
-    <td>
-<form>
-  <label for="title">Title:</label><br>
-  <input size=35  type="text" id="title" name="titel"><br>
-  <label for="first_name">First Name:</label><br>
-  <input size=35 type="text" id="first_name" name="first_name"><br>
-  <label for="middle_name">Middle Name:</label><br>
-  <input size=35  type="text" id="middle_name" name="middle_name"><br>
-  <label for="surname">Surname</label><br>
-  <input size=35  type="text" id="second_surname" name="second_surname"><br>
-  <label for="city">City:</label><br>
-  <input size=35  type="text" id="city" name="city"><br>
-  <label for="address">Address:</label><br>
-  <input size=35  type="text" id="address" name="address"><br>
-  <label for="zip">ZIP:</label><br>
-  <input size=35  type="text" id="zip" name="zip"><br>
-  <label for="country">Country:</label><br>
-  <input size=35  type="text" id="country" name="country"><br>
+
+<br>
+<button type="button" onclick="FillWesternName()">Western Name</button>
+<button type="button" onclick="FillHispanicName()">Fill Multi Word Last Name</button>
+
+
+<br><br>
+<h1>Structured Name</h1>
+<form id="structured_name">
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="titel"><br>
+  <label for="first_name">First Name:</label>
+  <input type="text" id="first_name" name="first_name"><br>
+  <label for="middle_name">Middle Name:</label>
+  <input type="text" id="middle_name" name="middle_name"><br>
+  <label for="surname">Surname</label>
+  <input type="text" id="second_surname" name="second_surname"><br>
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address"><br>
+  <label for="city">City:</label>
+  <input type="text" id="city" name="city"><br>
+  <label for="zip">ZIP:</label>
+  <input type="text" id="zip" name="zip"><br>
+  <label for="state">State:</label>
+  <input type="text" id="state" name="state"><br>
+  <label for="country">Country:</label>
+  <input type="text" id="country" name="country"><br>
   <button type="submit" value="Submit">Submit</button>
 </form>
-    </td>
-    <td>
-<form>
-  <label for="title">Title:</label><br>
-  <input size=35  type="text" id="title" name="titel"><br>
-  <label for="first_name">First Name:</label><br>
-  <input size=35  type="text" id="first_name" name="first_name"><br>
-  <label for="middle_name">Middle Name:</label><br>
-  <input size=35  type="text" id="middle_name" name="middle_name"><br>
-  <label for="middle_name">First Surname</label><br>
-  <input size=35  type="text" id="first_surname" name="first_surname"><br>
-  <label for="second_surname">Second Surname:</label><br>
-  <input size=35  type="text" id="second_surname" name="second_surname"><br>
-  <label for="city">City:</label><br>
-  <input size=35  type="text" id="city" name="city"><br>
-  <label for="address">Address:</label><br>
-  <input size=35  type="text" id="address" name="address"><br>
-  <label for="zip">ZIP:</label><br>
-  <input size=35  type="text" id="zip" name="zip"><br>
-  <label for="country">Country:</label><br>
-  <input size=35  type="text" id="country" name="country"><br>
+
+<br><br>
+<h1>More-Structured Name</h1>
+    
+<form id="more_structured_name">
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="titel"><br>
+  <label for="first_name">First Name:</label>
+  <input type="text" id="first_name" name="first_name"><br>
+  <label for="middle_name">Middle Name:</label>
+  <input stype="text" id="middle_name" name="middle_name"><br>
+  <label for="middle_name">First Surname</label>
+  <input type="text" id="first_surname" name="first_surname"><br>
+  <label for="second_surname">Second Surname:</label>
+  <input type="text" id="second_surname" name="second_surname"><br>
+  
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address"><br>
+
+  <label for="city">City:</label>
+  <input type="text" id="city" name="city"><br>
+
+  <label for="zip">ZIP:</label>
+  <input type="text" id="zip" name="zip"><br>
+  <label for="state">State:</label>
+  <input type="text" id="state" name="state"><br>
+  <label for="country">Country:</label>
+  <input type="text" id="country" name="country"><br>
   <button type="submit" value="Submit">Submit</button>
 </form>
-    </td>
-    <td>
-<form>
-  <input size=35  type="text" id="a" name="a"><br>
-  <input size=35  type="text" id="b" name="b"><br>
-  <input size=35  type="text" id="c" name="c"><br>
-  <input size=35  type="text" id="d" name="d"><br>
-  <input size=35  type="text" id="e" name="e"><br>
-  <input size=35  type="text" id="f" name="f"><br>
-  <input size=35  type="text" id="g" name="g"><br>
-  <input size=35  type="text" id="h" name="h"><br>
-  <input size=35  type="text" id="i" name="i"><br>
-  <button type="submit" value="Submit">Submit</button>
-</form>
-    </td>
-  </tr>
+
+
   </body>
 </html>
