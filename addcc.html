@@ -22,7 +22,7 @@
 </style>
 
 <script>
-      var CCFillFormSimpsons = function() {
+      var FillForm = function() {
       var form = document.forms['ccform'];
       form['credit_card_name'].value = 'Homer Simpson';
       form['credit_card_number'].value = '4408-0412-3456-7893';
@@ -33,17 +33,13 @@
       }
 </script>
 </head>
-<body>
-<form id="ccform" action="" method="post" onclick=
-"CCFillFormSimpsons()" name="ccform">
-<div class="hidden-cc-form-elements"><input class="hidden-field"
-type="text" autocomplete="cc-name" id="credit_card_name">
-<input class="hidden-field" type="text" autocomplete="cc-number"
-id="credit_card_number"> <input class="hidden-field" type="text"
-autocomplete="cc-exp-month" id="expiration_month"> <input class=
-"hidden-field" type="text" autocomplete="cc-exp-year" id=
-"expiration_year"></div>
-<input type="submit" value="Add Credit Card" id=
-"credit_card_submit"></form>
+    <body>
+    <form id="ccform" action="" method="post" onclick= "FillForm()" name="ccform">
+    <div class="hidden-cc-form-elements"><input class="hidden-field" type="text" autocomplete="cc-name" id="credit_card_name">
+        <input class="hidden-field" type="text" autocomplete="cc-number"id="credit_card_number"> 
+        <input class="hidden-field" type="text" autocomplete="cc-exp-month" id="expiration_month">
+        <input class="hidden-field" type="text" autocomplete="cc-exp-year" id="expiration_year">
+    </div>
+    <input type="submit" value="Add Credit Card" id="credit_card_submit"></form>
 </body>
 </html>
