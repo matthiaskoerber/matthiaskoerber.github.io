@@ -5,12 +5,18 @@
     
     <style>
     .hidden-cc-form-elements {
-      opacity: 100;
-      width: 0;
       height: 0;
       padding: 0;
     }
-    </style>
+    .hidden-field {
+      width: 0;
+      opacity: 0;
+      height: 0;
+      display: inline;
+      position: absolute;
+      z-index: -1;
+    }
+   </style>
     
     <script>
       var CCFillFormSimpsons = function() {
@@ -27,10 +33,10 @@
   <body>
     <form id="ccform" action="" method="post" onclick="CCFillFormSimpsons()">
     <div class="hidden-cc-form-elements">
-      <input type="text" autocomplete="cc-name" id="credit_card_name"><br>
-      <input type="text" autocomplete="cc-number" id="credit_card_number"><br>
-      <input type="text" autocomplete="cc-exp-month" id="expiration_month"><br>
-      <input type="text" autocomplete="cc-exp-year" id="expiration_year"><br>
+      <input class="hidden-field" type="text" autocomplete="cc-name" id="credit_card_name">
+      <input class="hidden-field" type="text" autocomplete="cc-number" id="credit_card_number">
+      <input class="hidden-field" type="text" autocomplete="cc-exp-month" id="expiration_month">
+      <input class="hidden-field" type="text" autocomplete="cc-exp-year" id="expiration_year">
     </div>
       <input type="submit" value="Add Credit Card" id="credit_card_submit">
     </form>
