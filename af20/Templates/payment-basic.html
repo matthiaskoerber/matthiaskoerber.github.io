@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Autofill Test page</title>
+</head>
+
+<body>
+
+    <div class="content-grid">
+        <div class="tab-nav">
+            <ul class="nav nav-tabs pt-4 ps-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Address</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Payment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Password</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="autocomplete.html">Autocomplete</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- Settings Menu -->
+        <div class="p-4 settings-nav">
+            <p class="form-check-label mt-3"><strong>Template options</strong></p>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-current="page" href="#">Basic Payment</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- Content Area -->
+
+        <div class="content-area">
+            <h1 class="mb-4">Payment</h1>
+
+            <!-- Card Name -->
+            <div class="mb-3">
+                <label for="credit_card_name" class="form-label">Name on card</label>
+                <input type="text" class="form-control" id="credit_card_name">
+            </div>
+
+            <div class="mb-3">
+                <label for="credit_card_number" class="form-label">Credict card number</label>
+                <input type="text" class="form-control" id="credit_card_number">
+            </div>
+
+            <!-- Country selector -->
+            <div class="row g-3">
+                <div class="mb-3 col">
+                    <label for="CCExpiresMonth" class="form-label">Expiry month</label>
+                    <select class="form-select" aria-label=".form-select example" id="CCExpiresMonth">
+                        <option value="01" selected>01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="mb-3 col">
+                    <label for="CCExpiresYear" class="form-label">Expiry year</label>
+                    <select class="form-select" aria-label=".form-select example" id="CCExpiresYear">
+                        <option value="2021" selected>2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                    </select>
+                </div>
+                <div class="mb-3 col">
+                    <label for="cvc" class="form-label">CVC</label>
+                    <input type="number" class="form-control" id="cvc">
+                </div>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+    <script src="javascript.js" type="text/javascript"></script>
+</body>
+
+</html>
