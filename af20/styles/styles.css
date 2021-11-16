@@ -15,7 +15,6 @@
   padding: 2.25rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .content-area-wide {
@@ -45,3 +44,51 @@ div.narrow {
   max-width: 22rem;
   justify-self: right;
 }
+
+div.corner-case {
+  position: absolute;
+  padding: 2px;
+  margin: 0px;
+  width: 2px;
+}
+
+div.corner-case > input {
+  padding: 4px;
+  border-color: red;
+  border-width: 2px;
+}
+
+div.corner-case-tl {
+  top: 0px;
+  left: 0px;
+}
+
+div.corner-case-tr {
+  top: 0px;
+  right: 12px;
+}
+
+div.corner-case-bl {
+  bottom: -14px;
+  left: 0px;
+}
+
+div.corner-case-br {
+  bottom: -14px;
+  right: 12px;
+}
+
+/* div.corner {
+  background-color: white;
+  position: absolute;
+  padding: 2px;
+}
+
+div.corner-tl {
+  top: 0;
+  left: 0;
+}
+
+div.corner > h1 {
+  display: none;
+} */

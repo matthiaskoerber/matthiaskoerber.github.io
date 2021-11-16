@@ -31,6 +31,7 @@
                     <a class="nav-link" href="autocomplete.html">Autocomplete</a>
                 </li>
 
+
             </ul>
         </div>
         <!-- Settings Menu -->
@@ -44,18 +45,37 @@
                     <a class="nav-link" href="address-no-labels.html">Basic with no labels</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" aria-current="page" href="#">House/street number + Phone area code</a>
+                    <a class="nav-link" href="address-houses.html">House/street number + Phone area code</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="address-narrow.html">Narrow form + aligned to right</a>
+                    <a class="nav-link" aria-current="page" href="address-narrow.html">Narrow form + aligned to
+                        right</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="address-wide.html">Super wide</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="address-corner-01.html">Corner cases</a>
+                    <a class="nav-link disabled" href="#">Corner cases</a>
                 </li>
             </ul>
+            <p class="form-check-label mt-3"><strong>Corners:</strong></p>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="address-corner-01.html">Top left corner</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="address-corner-02.html">Top right</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="address-corner-03.html">Bottom left</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Bottom right</a>
+                </li>
+
+
+            </ul>
+
             <p class="form-check-label mt-3"><strong>Fill with default values</strong></p>
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -66,53 +86,38 @@
                 </li>
 
             </ul>
+
         </div>
 
         <!-- Content Area -->
 
         <div class="content-area">
-            <h1 class="mb-4">Address</h1>
+            <p class="mb-0">Click on a red narrow field on the:</p>
+            <h1 class="mb-4"> ↘️ Bottom right corner
+            </h1>
             <!-- Name -->
             <div class="row g-3">
-                <div class="mb-3 col">
-                    <label for="FirstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="FirstName">
+                <div class="mb-3 col corner-case corner-case-br">
+                    <input type="text" class="form-control" id="FirstName" placeholder="First Name">
                 </div>
                 <div class="mb-3 col">
-                    <label for="LastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="LastName">
+                    <input type="text" class="form-control" id="LastName" placeholder="Last Name">
                 </div>
             </div>
 
             <!-- Address lines -->
-            <!-- Flat & Building Name -->
-            <div class="row g-3">
-                <div class="mb-3 col-3">
-                    <label for="flat" class="form-label">Flat Number</label>
-                    <input type="text" class="form-control" id="flat">
-                </div>
-                <div class="mb-3 col">
-                    <label for="building-name" class="form-label">Building Name</label>
-                    <input type="text" class="form-control" id="building-name">
-                </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="Address1" placeholder="Address 1">
             </div>
-            <!-- Street number & Street address -->
-            <div class="row g-3">
-                <div class="mb-3 col-3">
-                    <label for="building-number" class="form-label">Building Number</label>
-                    <input type="text" class="form-control" id="building-number">
-                </div>
-                <div class="mb-3 col">
-                    <label for="street-name" class="form-label">Street Name</label>
-                    <input type="text" class="form-control" id="street-name">
-                </div>
+
+            <div class="mb-3">
+                <input type="text" class="form-control" id="Address2" placeholder="Address 2">
             </div>
 
             <!-- Country selector -->
             <div class="mb-3">
-                <label for="Country" class="form-label">Country</label>
                 <select class="form-select" aria-label=".form-select example" id="Country">
-                    <option selected> </option>
+                    <option selected>Country</option>
                     <option value="1">Germany</option>
                     <option value="2">United Kingdom</option>
                     <option value="3">United States</option>
@@ -121,38 +126,37 @@
             <!-- Zip + City + State -->
             <div class="row g-3">
                 <div class="mb-3 col">
-                    <label for="postCode" class="form-label">Post Code</label>
-                    <input type="text" class="form-control" id="postCode">
+                    <input type="text" class="form-control" id="Zip" placeholder="ZIP">
                 </div>
                 <div class="mb-3 col">
-                    <label for="City" class="form-label">City</label>
-                    <input type="text" class="form-control" id="City">
+                    <input type="text" class="form-control" id="City" placeholder="City">
                 </div>
-                <div class="mb-3 col">
-                    <label for="County" class="form-label">County</label>
-                    <input type="text" class="form-control" id="County">
+                <div class="mb-3 col-3">
+                    <select class="form-select" aria-label=".form-select example" id="State">
+                        <option selected>State</option>
+                        <option value="1">AL</option>
+                        <option value="2">AK</option>
+                        <option value="3">CA</option>
+                        <option value="4">CO</option>
+                        <option value="5">DE</option>
+                        <option value="6">DC</option>
+                        <option value="7">FL</option>
+                    </select>
                 </div>
             </div>
             <!-- Email input -->
             <div class="mb-3">
-                <label for="emailInput" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+                <input type="email" class="form-control" id="emailInput" placeholder="Email Address">
             </div>
 
             <!-- Phone number basic -->
-            <div class="row g-3">
-                <div class="mb-3 col-3">
-                    <label for="phone" class="form-label">Area code </label>
-                    <input type="text" class="form-control" id="phone" placeholder="+44">
-                </div>
-                <div class="mb-3 col">
-                    <label for="phone" class="form-label">Number </label>
-                    <input type="text" class="form-control" id="phone">
-                </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="phone" placeholder="Phone Number">
             </div>
             <button type="submit" class="btn btn-primary mt-3">Submit</button>
         </div>
     </div>
+
 
 
 
