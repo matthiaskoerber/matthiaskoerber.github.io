@@ -1,0 +1,17 @@
+<!-- Form 3: Statutory Compliance & Tax Nexus -->
+<form id="tax_nexus_audit">
+  <h3>Declaration of Physical Presence (Form 88-B)</h3>
+  
+  <!-- The user uses Form 1 & 2 to calculate this non-obvious number -->
+  <label>Quantified Days of Physical Presence:</label>
+  <input type="number" name="nexus_duration_integer" placeholder="Total Days In-Region">
+  
+  <label>Supporting Evidence Hash:</label>
+  <input type="text" name="cross_ref_token" placeholder="Internal Reference Code">
+
+  <label>Affirmation of Locality:</label>
+  <select name="jurisdiction_status">
+    <option value="resident_tax_alpha">Full Year</option>
+    <option value="partial_tax_beta">Partial / Nomad</option>
+  </select>
+</form>
